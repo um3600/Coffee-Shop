@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+:root {
+    --bg-dark: #0f0f0f;
+    --accent: #d4af37;
+    /* Champagne Gold */
+    --glass: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+.brand-font {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Premium Glass Navbar */
+.navbar {
+    background: rgba(15, 15, 15, 0.8) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 0;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    margin: 0 15px;
+}
+
+/* Hero Section with Parallax Effect */
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),
+        url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 5rem;
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+
+.accent-text {
+    color: var(--accent);
+}
+
+/* Working "Premium" Buttons */
+.btn-noir {
+    background: transparent;
+    color: white;
+    border: 1px solid var(--accent);
+    padding: 15px 40px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-noir::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: var(--accent);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.btn-noir:hover::before {
+    width: 100%;
+}
+
+.btn-noir:hover {
+    color: #000;
+}
+
+/* Menu Grid */
+.menu-card {
+    background: var(--glass);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.menu-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-10px);
+}
+
+.cart-badge {
+    background: var(--accent);
+    color: black;
+    font-weight: bold;
+}
+
+/* Toast Styling for working buttons */
+#custom-toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--accent);
+    color: black;
+    padding: 15px 25px;
+    display: none;
+    z-index: 1000;
+    font-weight: 600;
+}
+
+.shimmer-effect {
+    background: linear-gradient(to right, #d4af37 20%, #fff 40%, #fff 60%, #d4af37 80%);
+    background-size: 200% auto;
+    color: #000;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
